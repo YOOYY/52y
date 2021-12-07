@@ -1,0 +1,13 @@
+extends ../_share/layout/sidepage.pug
+block append config
+    - var currentId = 'news',jsFlag = 'newsarticle';
+    - head.title = "牌缘城市百科-牌缘城市官网"
+    - head.keywords = "牌缘城市百科,牌缘城市技巧"
+    - head.description = "牌缘城市百科为大家提供了最齐全的牌缘城市技巧，游戏资讯以及游戏攻略等，在这里你可以学到各大热门游戏技巧，同时还可以和各位玩家分享你的游戏知识"
+block append sideMain
+    .content.article.clear
+        .title
+        .main
+            .article_content
+            .article_nav.clear
+            a#goback.fr(href='javascript:history.back(-1)')

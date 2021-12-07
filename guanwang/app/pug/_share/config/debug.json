@@ -1,0 +1,13 @@
+{
+    "baseUrl":"/",
+    "imgUrl":"/imgs/",
+    "cssUrl":"/css/",
+    "jsUrl":"/js/",
+    "viewUrl":"/html/",
+    "apiUrl":"http://localhost:3000/",
+    "cacheUrl":"/html/data/",
+    "androUrl":"http://olresources.578w.com/newpygame/applications/paiyuan_paiyuan/android/com.qicheng.ntcp.apk",
+    "iosUrl":"https://nmlt.online:4431/dDINOV",
+    "pcUrl":"http://olresources.578w.com/newpygame/applications/paiyuan_paiyuan/windows/paiyuan_paiyuan_install.exe",
+    "version":"1"
+}

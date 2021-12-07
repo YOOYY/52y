@@ -1,0 +1,25 @@
+extends ../_share/layout/sidepage.pug
+block append config
+    -
+        var currentId = 'download',
+            title_sidemain = '首页>下载专区',
+            list = [
+                {title:'title_game1',img:'game1'},
+                {title:'title_game2',img:'game2'},
+                {title:'title_game3',img:'game3'}
+            ];
+    - head.title = "牌缘城市下载-牌缘城市官网"
+    - head.keywords = "牌缘城市下载,牌缘安卓下载,牌缘IOS下载"
+    - head.description = "牌缘城市下载,牌缘安卓下载,牌缘IOS下载"
+block append sideMain
+    #download.content.clear
+        each val in list
+            .game_panel
+                .title_box
+                    .title(class=val.title)
+                img.banner(src=imgUrl+'banner/'+val.img+'.jpg?v='+version alt='牌缘欢乐岛游戏')
+                .game_down_box.clear
+                    .down_phone #[i] 手机安装包下载
+                    a.down_pc(href=pcUrl) #[i] PC安装包下载
+                .qrcode
+                    img(src=imgUrl+'common/code_android.png?v='+version alt='牌缘欢乐岛安卓下载')

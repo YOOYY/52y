@@ -1,0 +1,15 @@
+extends ../_share/layout/sidepage.pug
+block append config
+    - var currentId = 'news',title_sidemain = '<a href="/">首页</a>&gt;活动公告', jsFlag = 'news';
+    - head.title = "牌缘城市活动公告-牌缘城市官网"
+    - head.keywords = "牌缘活动公告,牌缘城市活动公告"
+    - head.description = "牌缘活动公告为各位玩家提供最新游戏活动，游戏资讯，游戏礼包以及兑换码等活动详情。牌缘城市活动公告帮助玩家第一时间了解牌缘城市活动，获得游戏福利。"
+block append sideMain
+    #news.content.clear
+        ol.articlelist(data-id='21')
+            //- li 
+            //-     a(href='#')
+            //-         p.text 南通牌缘城市官方联系方式 #[span.time 2017-09-22]
+        #page
+block append js
+    script(src=jsUrl+'xlPaging.js')

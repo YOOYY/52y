@@ -1,0 +1,12 @@
+#downBox
+    .phone_box
+        a#downAndroid.down_android(href=androUrl)
+        a#downIos.down_ios(href=iosUrl)
+    a#pcDown.down_pc(href=pcUrl)
+    #codeBox
+        #codeAndroid.qrcode
+            img(src=imgUrl+'common/code_android.png?v='+version alt='牌缘欢乐岛安卓下载')
+        #codeIos.qrcode
+            img(src=imgUrl+'common/code_ios.png?v='+version alt='牌缘欢乐岛ios下载')
+    .qrcode
+        img(src=imgUrl+'common/qrcode.png?v='+version alt='牌缘欢乐岛公众号')

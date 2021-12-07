@@ -1,0 +1,46 @@
+extends ../_share/layout/container.pug
+block append config
+    - var currentId = 'index'
+    - pageJs = 'index'
+    - pageCss = 'index'
+
+block append main
+    include ../_share/plugin/downbox.pug
+    #game
+        .title
+            .game_title
+        .game_box.clear
+            a(href='../introduction/index.html?index=0')
+                img(src=imgUrl+'banner/game1.jpg?v='+version alt='牌缘欢乐岛游戏')
+            a(href='../introduction/index.html?index=1')
+                img(src=imgUrl+'banner/game2.jpg?v='+version alt='牌缘欢乐岛游戏')
+            a(href='../introduction/index.html?index=2')
+                img(src=imgUrl+'banner/game3.jpg?v='+version alt='牌缘欢乐岛游戏')
+    #news.clear
+        .title
+            .news_title
+        ol.articlelist
+        img#newsBanner(src='' alt='牌缘欢乐岛游戏')
+    #image
+        .title
+            .image_title
+        .banner_box
+            .prev
+            .next
+            ul
+                li.pos_1
+                    div
+                        img(src=`${imgUrl}banner/banner1.jpg?v=${version}` alt='牌缘欢乐岛游戏图鉴')
+                li.pos_2
+                    div
+                        img(src=`${imgUrl}banner/banner2.jpg?v=${version}` alt='牌缘欢乐岛游戏图鉴')
+                li.pos_3
+                    div
+                        img(src=`${imgUrl}banner/banner3.jpg?v=${version}` alt='牌缘欢乐岛游戏图鉴')
+                li.pos_4
+                    div
+                        img(src=`${imgUrl}banner/banner4.jpg?v=${version}` alt='牌缘欢乐岛游戏图鉴')
+                li.pos_5
+                    div
+                        img(src=`${imgUrl}banner/banner5.jpg?v=${version}` alt='牌缘欢乐岛游戏图鉴')
+        p.tel_phone 24小时全国服务热线：#{phone}    

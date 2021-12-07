@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牌缘3D下载</title>
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 0;
+            max-width: 960px;
+        }
+
+        .body,
+        .bg {
+            width: 100%;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .ios,
+        .andro {
+            position: absolute;
+            top: 11.4%;
+            left: 37%;
+            z-index: 1;
+            width: 28%;
+        }
+
+        .ios img,
+        .andro img {
+            width: 100%;
+        }
+
+        #info {
+            z-index: 99;
+            position: fixed;
+            width: 100%;
+            right: 0;
+            top: 0;
+            display: none;
+        }
+
+        .andro {
+            left: 68%;
+        }
+
+        #qidian_wpa_2885783957_306 {
+            transform: scale(0.7);
+            left: 3% !important;
+            top: 15% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="info" src="./imgs/info.jpg">
+    <div class="container">
+        <img src="imgs/bg.jpg?v=1" class="bg">
+        <a class="ios" id='down'>
+            <img src="imgs/ios.png" alt="">
+        </a>
+        <a class="andro" id='andro'>
+            <img src="imgs/andro.png" alt="">
+        </a>
+    </div>
+
+    <script>
+        var ua=window.navigator.userAgent.toLowerCase();
+
+        var browser={
+            versions: function() {
+                return {
+                    ie: ua.indexOf('trident')>-1, // IE内核
+                    opera: ua.indexOf('presto')>-1, // opera内核
+                    webKit: ua.indexOf('applewebkit')>-1,
+                    gecko: ua.indexOf('gecko')>-1&&ua.indexOf('khtml')==-1,
+                    mobile: !!ua.match(/applewebkit.*mobile.*/), // 是否是移动
+                    ios: !!ua.match(/\(i[^;]+;( u;)? cpu.+mac os x/), // ios内核
+                    android: ua.indexOf('android')>-1||ua.indexOf('Linux')>-1, // android内核
+                    iPhone: ua.indexOf('iphone')>-1, // iPhone内核
+                    iPad: ua.indexOf('ipad')>-1, // Ipad内核
+                    webApp: ua.indexOf('浏览器')==-1,
+                    wechat: ua.indexOf('micromessenger')>-1,
+                    qq: ua.indexOf('qq')>-1,
+                    safari: ua.indexOf('safari')>-1&&ua.indexOf('chrome')<0
+                };
+            }(),
+            language: (navigator.browserLanguage||navigator.language).toLowerCase()
+        };
+
+
+        var webKit={
+            isMobile: function() {
+                return browser.versions.mobile;
+            },
+            isAndroid: function() {
+                return browser.versions.android;
+            },
+            isIos: function() {
+                return browser.versions.ios||browser.versions.iPhone;
+            },
+            isiPad: function() {
+                return browser.versions.iPad;
+            },
+            isWeixin: function() {
+                return browser.versions.wechat;
+            },
+            isPC: function() {
+                var Agents=["Android","iPhone",
+                    "SymbianOS","Windows Phone",
+                    "iPad","iPod"];
+                var flag=true;
+                for(var v=0;v<Agents.length;v++) {
+                    if(ua.indexOf(Agents[v])>0) {
+                        flag=false;
+                        break;
+                    }
+                }
+                return flag;
+            }
+        };
+
+        document.getElementById("info").addEventListener('click',function() {
+            toggletips(0);
+        },false);
+
+        document.getElementById("down").addEventListener('click',function() {
+            download();
+        },false);
+        document.getElementById("andro").addEventListener('click',function() {
+            androdownload();
+        },false);
+        function download() {
+            if(webKit.isWeixin()) {
+                toggletips(1);
+            } else {
+                window.location.href='https://app.dakage.com/app/#/9b17e41272ad74827719f5d54eb5fa43';
+            }
+            return false;
+        }
+        function androdownload() {
+            if(webKit.isWeixin()) {
+                toggletips(1);
+            } else {
+                window.location.href='https://resourcess.52y.com/newpygame/applications/newpygame_0/android/com.yuanjia.newpygame.apk';
+            }
+            return false;
+        }
+
+        function toggletips(type) {
+            if(type==1) {
+                document.getElementById("info").style.display="block";
+            } else {
+                document.getElementById("info").style.display="none";
+            }
+        }
+    </script>
+    <!-- WPA start -->
+    <script id="qd2885783957e36350db9e9864affbeffc8c356c5e16"
+        src="https://wp.qiye.qq.com/qidian/2885783957/e36350db9e9864affbeffc8c356c5e16" charset="utf-8" async
+        defer></script>
+    <!-- WPA end -->
+</body>
+
+</html>

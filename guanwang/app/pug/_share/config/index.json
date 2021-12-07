@@ -1,0 +1,133 @@
+{
+    "baseCss" : "base",
+    "pageCss":false,
+    
+    "baseJs" : "base",
+    "pageJs":false,
+
+    "company":"牌缘（湖州）网络科技有限公司",
+    "address":"合肥市长丰县双墩镇阜阳北路科创北城6栋",
+    "phone":"4001785252",
+    "QQ":"4001785252",
+    "icp":"浙B2-20160483",
+    "gameNetTag":"33059002000158号",
+    "record":"浙ICP备16047867号-1",
+    "permit":"浙网文[2016]6466-354号版权所有 2016",
+
+    "head":{
+        "robots":"all",
+        "title" : "牌缘城市官网",
+        "keywords":"牌缘,牌缘城市,牌缘城市下载,牌缘手机游戏",
+        "description":"牌缘城市是一款游戏合集，牌缘城市包含了西瓦那斯坠落，登山赛，魔法猜球等诸多游戏的经典玩法，我们同时为大家提供了牌缘城市下载，牌缘手机游戏让玩家尽情享受游戏激情。",
+        "icon" : "favicon.ico"
+    },
+
+    "header":{
+        "nav":[
+            {
+                "href":"index/index.html",
+                "pageId":"index",
+                "text":"官网首页",
+                "tips":"HOME"
+            },
+            {
+                "href":"download/index.html",
+                "pageId":"download",
+                "text":"下载专区",
+                "tips":"DOWNLOADS"
+            },
+            {
+                "href":"news/index.html",
+                "pageId":"news",
+                "text":"活动公告",
+                "tips":"ACTIVITIES"
+            },
+            {
+                "href":"introduction/index.html",
+                "pageId":"introduction",
+                "text":"游戏介绍",
+                "tips":"INTRODUCTION"
+            },
+            {
+                "href":"customer/index.html",
+                "pageId":"customer",
+                "text":"客服中心",
+                "tips":"CUSTOMER"
+            },
+            {
+                "href":"payment/index.html",
+                "pageId":"payment",
+                "text":"充值中心",
+                "tips":"PAYMENT"
+            }
+        ],
+        "logo":{
+            "href":"index/index.html",
+            "img":"logo.png",
+            "alt":"牌缘欢乐岛logo"
+        }
+    },
+
+    "footer":{
+        "nav":[
+            {
+                "href":"../customer/article.html?name=aboutus",
+                "text":"公司介绍"
+            },
+            {
+                "href":"../customer/article.html?name=address",
+                "text":"公司地址"
+            },
+            {
+                "href":"../introduction/index.html",
+                "text":"游戏介绍"
+            },
+            {
+                "href":"../customer/index.html",
+                "text":"新手帮助"
+            },
+            {
+                "href":"../customer/article.html?name=family",
+                "text":"家长监护"
+            }
+        ]
+    },
+    "recharge" :
+        [
+            {
+                "label":"青卡：<i>5</i>元 获得1点贵宾点。附赠45钻石",
+                "money":5,
+                "index":11
+            },
+            {
+                "label":"绿卡：<i>20</i>元 获得4点贵宾点。附赠180钻石",
+                "money":20,
+                "index":12
+            },
+            {
+                "label":"黄卡：<i>50</i>元 获得11点贵宾点。附赠450钻石",
+                "money":50,
+                "index":13
+            },
+            {
+                "label":"橙卡：<i>100</i>元 获得23点贵宾点。附赠900钻石,额外赠送9钻石",
+                "money":100,
+                "index":14
+            },
+            {
+                "label":"红卡：<i>200</i>元 获得50点贵宾点。附赠1800钻石,额外赠送36钻石",
+                "money":200,
+                "index":15
+            },
+            {
+                "label":"紫卡：<i>500</i>元 获得130点贵宾点。附赠4500钻石,额外赠送135钻石",
+                "money":500,
+                "index":16
+            },
+            {
+                "label":"黑卡：<i>1000</i>元 获得270点贵宾点。附赠9000钻石,额外赠送360钻石",
+                "money":1000,
+                "index":17
+            }
+        ]
+}

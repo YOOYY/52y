@@ -1,0 +1,22 @@
+extends ./container.pug
+block append config
+    - var pageCss = 'sidepage', pageJs = 'sidepage';
+block append main
+    include ../plugin/downbox.pug
+    #mainContent.clear
+        #gamebar
+            .title
+            #gameList
+                a
+                    div(class={active: articleid === 'game1'} data-name='game1' data-id='2')
+                        img(src=imgUrl+'banner/game1.jpg?v='+version alt='牌缘欢乐岛精品游戏')
+                a
+                    div(class={active: articleid === 'game2'} data-name='game2' data-id='9')
+                        img(src=imgUrl+'banner/game2.jpg?v='+version alt='牌缘欢乐岛精品游戏')
+                a
+                    div(class={active: articleid === 'game3'} data-name='game3' data-id='3')
+                        img(src=imgUrl+'banner/game3.jpg?v='+version alt='牌缘欢乐岛精品游戏')
+        #sideMain
+            .title_sidemain #{title_sidemain}
+            block sideMain
+        p.tel_phone 24小时全国服务热线：#{phone}

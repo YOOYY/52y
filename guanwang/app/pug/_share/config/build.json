@@ -1,0 +1,9 @@
+{
+    "baseUrl":"/",
+    "imgUrl":"/imgs/",
+    "cssUrl":"/css/",
+    "jsUrl":"/js/",
+    "viewUrl":"/html/",
+    "apiUrl":"http://localhost:3000/",
+    "cacheUrl":"/html/data/"
+}

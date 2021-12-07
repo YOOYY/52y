@@ -1,0 +1,10 @@
+extends ../_share/layout/sidepage.pug
+block append config
+    - var currentId = 'customer', title_sidemain = '首页>支付结果';
+    - head.title = "牌缘城市支付-牌缘城市官网"
+    - head.keywords = "牌缘城市支付"
+block append sideMain
+    #payback.content.article.clear
+        .title 支付成功
+        .main
+            .success

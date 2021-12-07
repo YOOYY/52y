@@ -1,0 +1,4 @@
+**/*.js
+!app/**/*.js
+!debug/**/*.js
+!build/**/*.js

@@ -1,0 +1,6 @@
+$env: 'debug' !default;
+$imgUrl: '/imgs/' !default;
+$version:'?v=1';
+@if($env == 'build') {
+    $imgUrl: '/prod/path';
+}

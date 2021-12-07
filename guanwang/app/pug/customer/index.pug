@@ -1,0 +1,55 @@
+extends ../_share/layout/sidepage.pug
+block append config
+    - var currentId = 'customer',title_sidemain = '首页>客服中心';
+block append sideMain
+    #customer.content.clear
+        .top
+            ul
+                li
+                    a.submit
+                li
+                    a.family
+                li
+                    a.apply
+                li
+                    a.problem
+                li
+                    a.search
+                li
+        .common_service
+            .title_box
+                .title
+            ul.list
+                li
+                    .account
+                    p
+                        a(href='#') 忘记登录密码怎么办
+                        //- /html/customer/article.html?name=password
+                    p
+                        a(href='#') 注册账号时密保的重要性
+                    p
+                        a(href='#') 忘记保险箱密码怎么办
+                li
+                    .payment
+                    p
+                        a(href='#') 如何充值
+                    p
+                        a(href='#') 充值有哪些方式
+                    p
+                        a(href='#') 忘记保险箱密码怎么办
+                li
+                    .game
+                    p
+                        a(href='#') 安卓，ios，pc版的下载地址
+                    p
+                        a(href='#') 无法登陆游戏
+                    p
+                        a(href='#') 游戏下载下来闪退
+                li
+                    .prop
+                    p
+                        a(href='#') vip的获得
+                    p
+                        a(href='#') 礼物怎么购买
+                    p
+                        a(href='#') 包裹用来做什么的

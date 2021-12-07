@@ -1,0 +1,29 @@
+extends ./container.pug
+block append config
+    - pageCss = 'sidepage'
+    - pageJs = 'sidepage'
+
+block append main
+    include ../plugin/downbox.pug
+    #mainContent.clear
+        #sidebar
+            a.download(href=pcUrl)
+            .help_box
+                .title #[i] 新手帮助
+                ul
+                    li #[a(href='#') #[i]游戏介绍]
+                    li #[a(href='#') #[i]新手教程]
+                    li #[a(href='#') #[i]充值指引]
+                    li #[a(href='#') #[i]游戏FAQ]
+                    li #[a(href='#') #[i]领奖指南]
+                    li #[a(href='#') #[i]防骗指南]
+                    li #[a(href='#') #[i]账号安全]
+                    li #[a(href='#') #[i]账号申述]
+                .service_box.clear
+                    a.staff
+                    a.ask
+                p 客服热线: #{phone} #[br] QQ: #{QQ}
+        #sideMain
+            .title_sidemain !{title_sidemain}
+            block sideMain
+        p.tel_phone 24小时全国服务热线：#{phone}

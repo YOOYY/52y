@@ -1,0 +1,18 @@
+doctype html
+html(lang='zh-CN')
+    block config
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=1200,initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title !{head.title}
+        meta(name='keywords' content=head.keywords)
+        meta(name='description' content=head.description)
+        meta(name='Robots' content=head.robots)
+        link(href=baseUrl+'favicon.ico' rel='shortcut icon')
+        if baseCss
+            link(href=cssUrl+baseCss+'.css?v='+version rel='stylesheet')
+        if pageCss
+            link(href=cssUrl+pageCss+'.css?v='+version rel='stylesheet')
+        block head
+    block body

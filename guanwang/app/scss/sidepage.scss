@@ -1,0 +1,450 @@
+@import './_config.scss';
+@import './_sprites/sidebar.scss';
+
+#mainContent{
+    margin-top:75px;
+    background-color: #f3f7fd;
+}
+
+#sidebar{
+    float: left;
+    width: 256px;
+    background: #e8f1ff;
+    border: solid 2px #d8e6ff;
+    i{
+        float: left;
+    }
+
+    .download{
+        @include sprite($s-download);
+        border-bottom: solid 2px #d8e6ff;
+    }
+
+    .title{
+        color: #195c86;
+        margin: 10px 0;
+        i{
+            @include sprite($s-help);
+            margin: 0 8px;
+        }
+    }
+
+    ul{
+        background-color: #f3f7fd;
+        padding: 0 8px 8px 8px;
+    }
+
+    li{
+        float: left;
+        width:120px; height: 34px;
+        font-size: 14px;
+        border-bottom: dashed 1px #90a8b7;
+        i{
+            margin-right: 8px;
+            @include sprite($s-arrow);
+        }
+        a{
+            margin-top: 12px;
+            color: #4f637a;
+        }
+    }
+
+    .service_box{
+        border:solid #d8e6ff;
+        border-width: 2px 0;
+        a{
+            float: left;
+        }
+        .staff{
+            @include sprite($s-staff);
+            border-right: solid 2px #d8e6ff;
+        }
+        .ask{
+            @include sprite($s-ask);
+        }
+    }
+
+    p{
+        color: #195c86;
+        font-size: 14px;
+        text-align: center;
+        padding:8px 0;
+    }
+}
+
+#sideMain{
+    float: left;
+    width: 764px;
+    .title_sidemain{
+        font-size: 20px;
+        height: 46px;
+        color: #546283;
+        line-height: 46px;
+        padding-left: 17px;
+        border-bottom:2px solid #d8e6ff;
+        a{
+            display: inline;
+            color: #546283;
+        }
+    }
+    .content{
+        margin:16px 14px;
+    }
+}
+
+@import './_sprites/gamebar.scss';
+#gamebar{
+    float: left;
+    width: 256px;
+    background-color:#e8f1ff;
+    border:2px solid #d8e6ff;
+    .title{
+        @include sprite($s-title);
+        border-bottom: 2px solid #d8e6ff;
+    }
+}
+
+#gameList{
+    div{
+        position: relative;
+        margin-top: 4px;
+        cursor: pointer;
+        &:after{
+            content:'';
+            position: absolute;
+            left: 0; top: -1px;
+            right: 0;bottom: -1px;
+            z-index:1;
+            background-color: #000;
+            opacity: 0.3;
+            filter:alpha(opacity=30);
+        }
+        &.active:after{
+            @include sprite($s-active);
+            background-color: transparent;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        img{
+            width: 256px;
+            height: 138px;
+        }
+    }
+}
+
+#sideMain .article{
+    width: 736px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: solid 2px #d2e3f7;
+    .title{
+        background-color: #e8f1ff;
+        border-radius: 8px 8px 0 0;
+        border-bottom: solid 2px #d2e3f7;
+        text-align: center;
+        color: #747198;
+        padding-top: 13px;
+        height: 39px;
+        div{
+            margin: 0 auto;
+        }
+    }
+    .main{
+        font-size: 14px;
+        line-height: 22px;
+        color: #747198;
+        min-height: 175px;
+        padding: 25px 40px 40px 40px;
+        h2{
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+        p{
+            font-size: 14px;
+            margin-bottom: 27px;
+        }
+        .family_down{
+            display: inline;
+            color: #747198;
+        }
+        #goback{
+            @include sprite($s-goback);
+        }
+    }
+    .article_nav{
+        a{
+            color: #505bbe;
+            margin:16px 0;
+        }
+    }
+    .title_game1{
+        @include sprite($s-title_game1);
+    }
+    .title_game2{
+        @include sprite($s-title_game2);
+    }
+    .title_game3{
+        @include sprite($s-title_game3);
+    }
+}
+
+//下载专区
+@import './_sprites/download.scss';
+#download{
+    &.content{
+        margin:8px;
+    }
+
+    .game_panel{
+        width: 324px; height: 300px;
+        background-color: #fff;
+        border: solid 2px #d2e3f7;
+        border-radius: 8px;
+        margin: 8px 7px;
+        padding:0 16px;
+        float: left;
+        position: relative;
+    }
+
+    .title_box{
+        border-bottom:1px solid #bccae4;
+    }
+
+    .title{
+        margin:15px 0 11px 0;
+    }
+
+    .title_game1{
+        @include sprite($s-game1);
+    }
+    .title_game2{
+        @include sprite($s-game2);
+    }
+    .title_game3{
+        @include sprite($s-game3);
+    }
+
+    .banner{
+        margin-top: 8px;
+    }
+
+    .game_down_box{
+        padding:15px 0 13px;
+        .down_phone,.down_pc{
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            color:#4b5065;
+        }
+        i{
+            float: left;
+            margin-right: 8px;
+        }
+    }
+
+    .down_phone{
+        width: 163px;
+        cursor: pointer;
+        i{
+            @include sprite($s-phone);
+        }
+    }
+
+    .down_pc{
+        padding-left: 10px;
+        border-left: 1px solid #bccae4;
+        i{
+            @include sprite($s-pc);
+        }
+    }
+
+    .qrcode{
+        position: absolute;
+        left: 60px;bottom: 60px;
+        display: none;
+    }
+}
+
+#news{
+    width: 736px; height: 350px;
+	background-color: #fff;
+	border-radius: 8px;
+    border: solid 2px #d2e3f7;
+    position: relative;
+    ol{
+        width: 700px;
+        margin: 0 auto;
+        li{
+            color: #585858;
+            height: 38px;line-height:38px;
+            border-bottom: #c2c2c2 dotted 1px;
+            font-size: 14px;
+            a{
+                color: #585858;
+            }
+            .text{
+                width: 580px;
+            }
+        }
+    }
+
+    //分页
+    #page {
+        position: absolute;
+        left: 36%;
+        bottom: 0;
+        margin: 5px auto;
+        color: #666;
+        display: block;
+        text-align: center;
+        li {
+            display: inline-block;
+            min-width: 20px;
+            cursor: pointer;
+            color: #86889e;
+            font-size: 16px;
+            background: none;
+            text-align: center;
+            margin: 0 4px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0; 
+            padding: 0;
+            width: auto;
+            border:0;
+            float: none;
+            &.xl-disabled {
+                opacity: 0.5;
+                cursor: no-drop;
+            }
+            &.xl-disabled:hover {
+                border-bottom: none;
+            }
+            &.xl-active {
+                color: #3d569c;
+                font-weight: bolder;
+                border-bottom: 2px solid #a8b2d0;
+            }
+            &:hover {
+                border-bottom: 2px solid #a8b2d0;
+            }
+        }
+        .pagetip:hover{
+            border: none;
+            cursor: auto;
+        }
+    }
+}
+
+#customer,#payment{
+    .common_service{
+        width: 732px;
+        border: 2px solid #d8e6ff;
+        margin-top: 30px;
+        overflow: hidden;
+        .list{
+            border-top: 2px solid #d8e6ff;
+            background-color: #ffffff;
+            li{
+                float: left;
+                width: 181px; height: 175px;
+                margin: 15px 0;
+                padding-top: 19px;
+                border-left: 2px solid #d8e6ff;
+                overflow: hidden;
+                &:first-child{
+                    border-left: 0;
+                }
+                div{
+                    margin: 0 auto;
+                }
+                p{
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                a{
+                    color: #8392aa;
+                }
+            }
+        }
+    }
+    .title_box{
+        padding-top: 13px;
+        height: 35px;
+        background-color: #e8f1ff;
+        .title,.type{
+            margin: 0 auto;
+        }
+    }
+}
+
+@import './_sprites/customer.scss';
+#customer{
+    .top{
+        ul{
+            width: 732px;
+            border-top: 2px solid #d8e6ff;
+            border-left: 2px solid #d8e6ff;
+            overflow: hidden;
+            a{
+                margin: 0 auto;
+            }
+        }
+        li{
+            float: left;
+            width: 242px; height: 85px;
+            padding: 35px 0;
+            background-color: #fff;
+            border-bottom: 2px solid #d8e6ff;
+            border-right: 2px solid #d8e6ff;
+            overflow: hidden;
+        }
+    }
+
+    .submit{
+        @include sprite($s-submit);
+    }
+    .family{
+        @include sprite($s-family);
+    }
+    .apply{
+        @include sprite($s-apply);
+    }
+    .problem{
+        @include sprite($s-problem);
+    }
+    .search{
+        @include sprite($s-search);
+    }
+    .account{
+        @include sprite($s-account);
+    }
+    .payment{
+        @include sprite($s-payment);
+    }
+    .game{
+        @include sprite($s-game);
+    }
+    .prop{
+        @include sprite($s-prop);
+    }
+    .title{
+        @include sprite($s-title);
+    }
+}
+
+@import './_sprites/payment.scss';
+#payback{
+    .fail,.success{
+        margin:0 auto;
+    }
+    .success{
+        @include sprite($s-payback_success);
+    }
+    .fail{
+        @include sprite($s-payback_fail);
+    }
+}

@@ -1,0 +1,9 @@
+#header
+    .container
+        a.logo.fl(href=viewUrl+header.logo.href)
+        ul.fl
+            each val, index in header.nav
+                li
+                    a(href=viewUrl+val.href class={active:currentId === val.pageId})
+                        |!{val.text}
+                        p !{val.tips}

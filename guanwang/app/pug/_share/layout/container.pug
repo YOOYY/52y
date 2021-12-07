@@ -1,0 +1,11 @@
+extends ../plugin/head.pug
+block append body
+    body(data-pageid=jsFlag)
+        #cover
+            include ../plugin/header.pug
+            #main
+                .container
+                    block main
+            img#bgBottom(src=imgUrl+"common/bg_bottom.png?v="+version alt='牌缘欢乐岛背景图')
+            include ../plugin/footer.pug
+            block js

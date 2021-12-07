@@ -1,0 +1,388 @@
+@import './_config.scss';
+@import './_sprites/payment.scss';
+#payment{
+    .common_service{
+        background: #fff;
+        .list li{
+            height: 87px;
+        }
+    }
+    .title{
+        @include sprite($s-title);
+    }
+    .type{
+        @include sprite($s-type);
+    }
+    .card{
+        @include sprite($s-card);
+    }
+    .alipay{
+        @include sprite($s-alipay);
+    }
+    .wechat{
+        @include sprite($s-wechat);
+    }
+    .payment {
+        margin: 0 auto;
+        width: 650px;
+        color: #747198;
+
+        .pay_title {
+            height: 38px;
+            border-bottom: 2px solid #d8e6ff;
+            line-height: 38px;
+            text-align: center;
+            span {
+                color: #ff9946;
+            }
+        }
+
+        label{
+            display: block;
+            float: left;
+            width: 100px;
+        }
+
+        .input{
+            height: 32px;line-height:32px;
+            margin-top: 17px;
+            &:first-child{
+                margin-top: 24px;
+            }
+            input {
+                width: 206px; height: 28px;
+                padding: 0 0 0 10px;
+                margin-left: 26px;
+                border: solid 2px #d2e3f7;
+                color: #8781d1;
+                float: left;
+            }
+        }
+
+        .payment_num{
+            margin-top: 32px;
+            label{
+                margin-top: 142px;
+            }
+        }
+
+        #selectInfullAmount {
+            width: 550px;
+            overflow: hidden;
+            li {
+                width: 546px; height: 36px;
+                line-height: 36px;
+                text-align: center;
+                border: solid 2px #d2e3f7;
+                cursor: pointer;
+                margin: 4px 0;
+            }
+        }
+
+        .btn_next {
+            display: block;
+            @include sprite($s-submit);
+            margin: 20px auto;
+        }
+        
+        .check{
+            margin:38px auto 22px auto;
+            float: none;
+            width: 220px;
+            cursor: pointer;
+            div{
+                float: left;
+                width: 18px;height: 18px;
+                border: #829acb 2px solid;
+                border-radius: 4px;
+                margin-right: 10px;
+                &.active{
+                    @include sprite($s-checked);
+                    border: 0;
+                }
+            }
+            input{
+                display: none;
+            }
+        }
+    }
+    .warm_hint {
+        padding: 20px 0;
+        border-top: 2px #d8e6ff dashed;
+        margin: 0 auto;
+        width: 620px;
+        p {
+            color: #8c8c94;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .tips{
+        padding-bottom: 6px;
+        border-bottom:2px solid #d8e6ff;
+        margin-bottom: 6px;
+        div{
+            @include sprite($s-tips);
+        }
+    }
+}
+  .btn_next {
+    display: block;
+    margin: 0.2rem auto;
+    @include sprite($s-next);
+    cursor: pointer;
+  }
+
+  .btn_next:hover {
+    @include sprite($s-next_active);
+  }
+
+  //遮罩
+  .mask {
+    background: #000000;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+
+  #qrcode_img_page.wechat_box {
+    position: fixed;
+    top: 30%; left: 36%;
+    display: none;
+    width: 420px;
+    color: #787878;
+    z-index: 9999;
+    background-color: #f4f5ef;
+    font-size: 14px;
+    .title {
+      position: relative;
+      height: 45px;width: 100%;
+      line-height: 45px;
+      margin: 0;
+      background: #0d509c;
+      color: #ffffff;
+      font-size: 22px;
+      letter-spacing: 2px;
+      text-align: center;
+      border-bottom: 1px solid #e0c59e;
+      a {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        width: 32px;
+        height: 32px;
+        @include sprite($s-close);
+        &:hover {
+          @include sprite($s-close_active);
+        }
+      }
+    }
+    .content {
+      border-top: 1px solid #fff;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .pay_content {
+      width: 322px;
+      margin: 15px auto 0;
+      min-height: 100px;
+      .top {
+        height: 160px;
+        margin-bottom: 20px;
+      }
+      .erweima {
+        float: left;
+        width: 160px; height: 160px;
+      }
+      .tips {
+        float: right;
+        width: 130px;
+        margin: 0;padding:0;border:0;
+        span {
+          display: block;
+          padding-top: 12px;
+          color: #ac844b;
+        }
+        p {
+          line-height: 21px;
+        }
+      }
+      .swp {
+        position: relative;
+        margin-top: 20px;
+        @include sprite($s-swp_point);
+      }
+      .finish {
+        padding: 0 20px;
+        color: #857865;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 35px;
+        overflow: hidden;
+      }
+      .middle {
+        margin-bottom: 20px;
+        overflow: hidden;
+        color: #494949;
+        table {
+          width: 322px;
+          border-collapse: collapse;
+        }
+        td {
+          text-align: center;
+          height: 23px;
+          border: 1px #d9d9d9 solid;
+        }
+        .td_color {
+          color: #e38100;
+        }
+        .td_bg1 {
+          background: #fff3d4;
+          width: 91px;
+        }
+        .td_bg2 {
+          background: #fff;
+        }
+      }
+    }
+  }
+
+
+#alipay{
+  .result {
+    position: fixed;
+    top: 30%; left: 35%;
+    display: none;
+    width: 420px;
+    z-index: 9999;
+    .title {
+      position: relative;
+      width:100%;height: 45px;
+      line-height: 45px;
+      text-align: center;
+      letter-spacing: 2px;
+      color: #ffffff;
+      background: #0d509c;
+      a {
+        position: absolute;
+        @include sprite($s-close);
+        top: 6px;right: 6px;
+      }
+      a:hover {
+        @include sprite($s-close_active);
+      }
+    }
+
+    .content {
+      margin: 0;
+      background-color: #f4f5ef;
+      p {
+        padding: 10px 40px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #787878;
+      }
+    }
+  }
+
+    //支付宝
+    .alipay_box {
+      position: fixed;
+      top: 30%; left: 35%;
+      width: 420px;
+      z-index: 9999;
+      color: #7d7d7d;
+      background: #f4f5ef;
+      display: none;
+  
+      .title {
+        position: relative;
+        background: #0d509c;
+        height: 44px;width: 100%;
+        line-height: 44px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-align: center;
+        color: #fff;
+        a {
+          position: absolute;
+          right: 7px; top: 7px;
+          @include sprite($s-close);
+          &:hover {
+            @include sprite($s-close_active);
+          }
+        }
+      }
+  
+      table {
+        margin: 0 auto;
+        td {
+          height: 40px;
+          line-height: 40px;
+        }
+        .txt {
+          color: #2596d8;
+        }
+      }
+  
+      .button2 {
+        float: left;
+        margin: 10px 45px;
+        @include sprite($s-buy);
+        border: 0;
+      }
+    }
+}
+
+  .result .button,
+  .wechat_box .button {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    width: 265px;
+    overflow: hidden;
+    .btn_hint {
+      float: left;
+      margin: 0 auto 20px;
+      @include sprite($s-hint_btn);
+    }
+    .btn_cancel {
+      float: left;
+      margin: 0 auto 20px 20px;
+      @include sprite($s-cancel);
+    }
+    .btn_hint:hover {
+      @include sprite($s-hint_btn_active);
+    }
+    .btn_cancel:hover {
+      @include sprite($s-cancel_active);
+    }
+  }
+  .msg{
+    float: left;
+    height: 32px;
+    color:#a467a0;
+  }
+  .msg i{
+    float: left;
+    margin: 6px 11px 0 11px;
+    @include sprite($s-success);
+  }
+  .msg i.fail{
+    @include sprite($s-fail);
+  }
+  #selectInfullAmount li.active{
+    border-color:#8781d1!important;
+    background: #e8f6ff;
+  }
+
+  #payment .list li{
+    cursor:pointer;
+  }
